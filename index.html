@@ -556,7 +556,7 @@ Program for practicing German verb conjugations.-->
          function checkAnswer() {
              const userAnswer = document.getElementById('inputVerb').value.trim();
              const correctAnswer = currentVerb.conjugations[currentTense][currentPronoun];
-             if (userAnswer === correctAnswer) {
+             if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
                  document.getElementById('result').innerText = 'Correct!';
                  document.getElementById('result').style.color = 'green';
                  displayNewVerb(); // Immediately display new verb after checking answer
