@@ -250,6 +250,11 @@ Program for practicing German verb conjugations.-->
                <label><input type="checkbox" id="verb12" name="verbs" value="12" checked> mögen</label><br>
                <label><input type="checkbox" id="verb13" name="verbs" value="13" checked> dürfen</label><br>
                <label><input type="checkbox" id="verb14" name="verbs" value="14" checked> tun</label><br>
+               <label><input type="checkbox" id="verb15" name="verbs" value="15" checked> laufen</label><br>
+               <label><input type="checkbox" id="verb16" name="verbs" value="16" checked> schreiben</label><br>
+               <label><input type="checkbox" id="verb17" name="verbs" value="17" checked> lesen</label><br>
+               <label><input type="checkbox" id="verb18" name="verbs" value="18" checked> essen</label><br>
+               <label><input type="checkbox" id="verb19" name="verbs" value="19" checked> trinken</label><br>
             </div>
          </fieldset>
          <fieldset class="options-column">
@@ -480,7 +485,77 @@ Program for practicing German verb conjugations.-->
              konjunktivI: { ich: 'tue', du: 'tuest', er: 'tue', wir: 'tun', ihr: 'tuet', sie: 'tun', SieF: 'tun' },
              konjunktivII: { ich: 'täte', du: 'tätest', er: 'täte', wir: 'täten', ihr: 'tätet', sie: 'täten', SieF: 'täten' }
          }
-         }
+         },
+         {
+         infinitive: 'laufen',
+            conjugations: {
+                präsens: { ich: 'laufe', du: 'läufst', er: 'läuft', wir: 'laufen', ihr: 'lauft', sie: 'laufen', SieF: 'laufen' },
+                präteritum: { ich: 'lief', du: 'liefst', er: 'lief', wir: 'liefen', ihr: 'lieft', sie: 'liefen', SieF: 'liefen' },
+                perfekt: { ich: 'bin gelaufen', du: 'bist gelaufen', er: 'ist gelaufen', wir: 'sind gelaufen', ihr: 'seid gelaufen', sie: 'sind gelaufen', SieF: 'sind gelaufen' },
+                plusquamperfekt: { ich: 'war gelaufen', du: 'warst gelaufen', er: 'war gelaufen', wir: 'waren gelaufen', ihr: 'wart gelaufen', sie: 'waren gelaufen', SieF: 'waren gelaufen' },
+                futurI: { ich: 'werde laufen', du: 'wirst laufen', er: 'wird laufen', wir: 'werden laufen', ihr: 'werdet laufen', sie: 'werden laufen', SieF: 'werden laufen' },
+                futurII: { ich: 'werde gelaufen sein', du: 'wirst gelaufen sein', er: 'wird gelaufen sein', wir: 'werden gelaufen sein', ihr: 'werdet gelaufen sein', sie: 'werden gelaufen sein', SieF: 'werden gelaufen sein' },
+                imperativ: { du: 'lauf', ihr: 'lauft', SieF: 'laufen Sie' },
+                konjunktivI: { ich: 'laufe', du: 'laufest', er: 'laufe', wir: 'laufen', ihr: 'laufet', sie: 'laufen', SieF: 'laufen' },
+                konjunktivII: { ich: 'liefe', du: 'liefest', er: 'liefe', wir: 'liefen', ihr: 'liefet', sie: 'liefen', SieF: 'liefen' }
+            }
+        },
+        { 
+            infinitive: 'schreiben',
+            conjugations: {
+                präsens: { ich: 'schreibe', du: 'schreibst', er: 'schreibt', wir: 'schreiben', ihr: 'schreibt', sie: 'schreiben', SieF: 'schreiben' },
+                präteritum: { ich: 'schrieb', du: 'schriebst', er: 'schrieb', wir: 'schrieben', ihr: 'schriebt', sie: 'schrieben', SieF: 'schrieben' },
+                perfekt: { ich: 'habe geschrieben', du: 'hast geschrieben', er: 'hat geschrieben', wir: 'haben geschrieben', ihr: 'habt geschrieben', sie: 'haben geschrieben', SieF: 'haben geschrieben' },
+                plusquamperfekt: { ich: 'hatte geschrieben', du: 'hattest geschrieben', er: 'hatte geschrieben', wir: 'hatten geschrieben', ihr: 'hattet geschrieben', sie: 'hatten geschrieben', SieF: 'hatten geschrieben' },
+                futurI: { ich: 'werde schreiben', du: 'wirst schreiben', er: 'wird schreiben', wir: 'werden schreiben', ihr: 'werdet schreiben', sie: 'werden schreiben', SieF: 'werden schreiben' },
+                futurII: { ich: 'werde geschrieben haben', du: 'wirst geschrieben haben', er: 'wird geschrieben haben', wir: 'werden geschrieben haben', ihr: 'werdet geschrieben haben', sie: 'werden geschrieben haben', SieF: 'werden geschrieben haben' },
+                imperativ: { du: 'schreib', ihr: 'schreibt', SieF: 'schreiben Sie' },
+                konjunktivI: { ich: 'schreibe', du: 'schreibest', er: 'schreibe', wir: 'schreiben', ihr: 'schreibet', sie: 'schreiben', SieF: 'schreiben' },
+                konjunktivII: { ich: 'schriebe', du: 'schriebest', er: 'schriebe', wir: 'schrieben', ihr: 'schriebet', sie: 'schrieben', SieF: 'schrieben' }
+            }
+        },
+        { 
+            infinitive: 'lesen',
+            conjugations: {
+                präsens: { ich: 'lese', du: 'liest', er: 'liest', wir: 'lesen', ihr: 'lest', sie: 'lesen', SieF: 'lesen' },
+                präteritum: { ich: 'las', du: 'last', er: 'las', wir: 'lasen', ihr: 'last', sie: 'lasen', SieF: 'lasen' },
+                perfekt: { ich: 'habe gelesen', du: 'hast gelesen', er: 'hat gelesen', wir: 'haben gelesen', ihr: 'habt gelesen', sie: 'haben gelesen', SieF: 'haben gelesen' },
+                plusquamperfekt: { ich: 'hatte gelesen', du: 'hattest gelesen', er: 'hatte gelesen', wir: 'hatten gelesen', ihr: 'hattet gelesen', sie: 'hatten gelesen', SieF: 'hatten gelesen' },
+                futurI: { ich: 'werde lesen', du: 'wirst lesen', er: 'wird lesen', wir: 'werden lesen', ihr: 'werdet lesen', sie: 'werden lesen', SieF: 'werden lesen' },
+                futurII: { ich: 'werde gelesen haben', du: 'wirst gelesen haben', er: 'wird gelesen haben', wir: 'werden gelesen haben', ihr: 'werdet gelesen haben', sie: 'werden gelesen haben', SieF: 'werden gelesen haben' },
+                imperativ: { du: 'lies', ihr: 'lest', SieF: 'lesen Sie' },
+                konjunktivI: { ich: 'lese', du: 'lesest', er: 'lese', wir: 'lesen', ihr: 'leset', sie: 'lesen', SieF: 'lesen' },
+                konjunktivII: { ich: 'läse', du: 'läsest', er: 'läse', wir: 'läsen', ihr: 'läset', sie: 'läsen', SieF: 'läsen' }
+            }
+        },
+        { 
+            infinitive: 'essen',
+            conjugations: {
+                präsens: { ich: 'esse', du: 'isst', er: 'isst', wir: 'essen', ihr: 'esst', sie: 'essen', SieF: 'essen' },
+                präteritum: { ich: 'aß', du: 'aßest', er: 'aß', wir: 'aßen', ihr: 'aßt', sie: 'aßen', SieF: 'aßen' },
+                perfekt: { ich: 'habe gegessen', du: 'hast gegessen', er: 'hat gegessen', wir: 'haben gegessen', ihr: 'habt gegessen', sie: 'haben gegessen', SieF: 'haben gegessen' },
+                plusquamperfekt: { ich: 'hatte gegessen', du: 'hattest gegessen', er: 'hatte gegessen', wir: 'hatten gegessen', ihr: 'hattet gegessen', sie: 'hatten gegessen', SieF: 'hatten gegessen' },
+                futurI: { ich: 'werde essen', du: 'wirst essen', er: 'wird essen', wir: 'werden essen', ihr: 'werdet essen', sie: 'werden essen', SieF: 'werden essen' },
+                futurII: { ich: 'werde gegessen haben', du: 'wirst gegessen haben', er: 'wird gegessen haben', wir: 'werden gegessen haben', ihr: 'werdet gegessen haben', sie: 'werden gegessen haben', SieF: 'werden gegessen haben' },
+                imperativ: { du: 'iss', ihr: 'esst', SieF: 'essen Sie' },
+                konjunktivI: { ich: 'esse', du: 'essest', er: 'esse', wir: 'essen', ihr: 'esset', sie: 'essen', SieF: 'essen' },
+                konjunktivII: { ich: 'äße', du: 'äßest', er: 'äße', wir: 'äßen', ihr: 'äßet', sie: 'äßen', SieF: 'äßen' }
+            }
+        },
+        { 
+            infinitive: 'trinken',
+            conjugations: {
+                präsens: { ich: 'trinke', du: 'trinkst', er: 'trinkt', wir: 'trinken', ihr: 'trinkt', sie: 'trinken', SieF: 'trinken' },
+                präteritum: { ich: 'trank', du: 'trankst', er: 'trank', wir: 'tranken', ihr: 'trankt', sie: 'tranken', SieF: 'tranken' },
+                perfekt: { ich: 'habe getrunken', du: 'hast getrunken', er: 'hat getrunken', wir: 'haben getrunken', ihr: 'habt getrunken', sie: 'haben getrunken', SieF: 'haben getrunken' },
+                plusquamperfekt: { ich: 'hatte getrunken', du: 'hattest getrunken', er: 'hatte getrunken', wir: 'hatten getrunken', ihr: 'hattet getrunken', sie: 'hatten getrunken', SieF: 'hatten getrunken' },
+                futurI: { ich: 'werde trinken', du: 'wirst trinken', er: 'wird trinken', wir: 'werden trinken', ihr: 'werdet trinken', sie: 'werden trinken', SieF: 'werden trinken' },
+                futurII: { ich: 'werde getrunken haben', du: 'wirst getrunken haben', er: 'wird getrunken haben', wir: 'werden getrunken haben', ihr: 'werdet getrunken haben', sie: 'werden getrunken haben', SieF: 'werden getrunken haben' },
+                imperativ: { du: 'trink', ihr: 'trinkt', SieF: 'trinken Sie' },
+                konjunktivI: { ich: 'trinke', du: 'trinkest', er: 'trinke', wir: 'trinken', ihr: 'trinket', sie: 'trinken', SieF: 'trinken' },
+                konjunktivII: { ich: 'tränke', du: 'tränkest', er: 'tränke', wir: 'tränken', ihr: 'tränket', sie: 'tränken', SieF: 'tränken' }
+            }
+        }
          ];
          
          const pronouns = ['ich', 'du', 'er', 'wir', 'ihr', 'sie', 'SieF'];
