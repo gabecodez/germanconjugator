@@ -1,43 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We've Moved!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            padding: 50px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>German Verb Conjugator Game</title>
+    <link rel="icon" href="Flag_of_Germany.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="verbconjugatorstyles.css?ver=1.0">
+    <link rel="canonical" href="https://www.langcentral.net/german/verb-game" />
 </head>
+
 <body>
-    <div class="container">
-        <h1>We've Moved!</h1>
-        <p>Our German verb conjugator website has a new home. Please visit us at our new address:</p>
-        <p><a href="https://langcentral.net">langcentral.net</a></p>
+    <div class="game-body">
+        <div class="game-container">
+            <div class="tenseDisplay" id="tenseDisplay">...</div>
+            <div class="display" id="display">...</div>
+            <input class="entertextbox" type="text" id="inputVerb" placeholder="Enter conjugated form">
+            <div>
+                <button class="special-char-button" onclick="insertChar('ä')">ä</button>
+                <button class="special-char-button" onclick="insertChar('ö')">ö</button>
+                <button class="special-char-button" onclick="insertChar('ü')">ü</button>
+                <button class="special-char-button" onclick="insertChar('ß')">ß</button>
+            </div>
+            <button class="button js-confetti" onclick="checkAnswer()" id="button">Check Answer</button>
+            <div class="result" id="result"></div>
+        </div>
+        <div class="options-toggle-menu">
+            <button onclick="toggleOptionsPanel()" class="button options-toggle">Options</button>
+            <a href="https://www.paypal.com/donate/?business=B3897YCWV6UU8&no_recurring=0&item_name=Help+me+code+more+stuff&currency_code=USD"
+                class="patreon-button" target="_blank" rel="noopener noreferrer">
+                ♥ Buy me a coffee ↗
+            </a>
+        </div>
+        <div class="options-panel" id="optionsPanel">
+            <fieldset class="options-column">
+                <legend>Verbs</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="verb0" name="verbs" value="0" checked> sein</label><br>
+                    <label><input type="checkbox" id="verb1" name="verbs" value="1" checked> haben</label><br>
+                    <label><input type="checkbox" id="verb2" name="verbs" value="2" checked> werden</label><br>
+                    <label><input type="checkbox" id="verb3" name="verbs" value="3" checked> gehen</label><br>
+                    <label><input type="checkbox" id="verb4" name="verbs" value="4" checked> machen</label><br>
+                    <label><input type="checkbox" id="verb5" name="verbs" value="5" checked> können</label><br>
+                    <label><input type="checkbox" id="verb6" name="verbs" value="6" checked> sehen</label><br>
+                    <label><input type="checkbox" id="verb7" name="verbs" value="7" checked> nehmen</label><br>
+                    <label><input type="checkbox" id="verb8" name="verbs" value="8" checked> sagen</label><br>
+                    <label><input type="checkbox" id="verb9" name="verbs" value="9" checked> wissen</label><br>
+                    <label><input type="checkbox" id="verb10" name="verbs" value="10" checked> geben</label><br>
+                    <label><input type="checkbox" id="verb11" name="verbs" value="11" checked> kommen</label><br>
+                    <label><input type="checkbox" id="verb12" name="verbs" value="12" checked> mögen</label><br>
+                    <label><input type="checkbox" id="verb13" name="verbs" value="13" checked> dürfen</label><br>
+                    <label><input type="checkbox" id="verb14" name="verbs" value="14" checked> tun</label><br>
+                    <label><input type="checkbox" id="verb15" name="verbs" value="15" checked> laufen</label><br>
+                    <label><input type="checkbox" id="verb16" name="verbs" value="16" checked> schreiben</label><br>
+                    <label><input type="checkbox" id="verb17" name="verbs" value="17" checked> lesen</label><br>
+                    <label><input type="checkbox" id="verb18" name="verbs" value="18" checked> essen</label><br>
+                    <label><input type="checkbox" id="verb19" name="verbs" value="19" checked> trinken</label><br>
+                </div>
+            </fieldset>
+            <fieldset class="options-column">
+                <legend>Verb Forms</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="tense0" name="tenses" value="0" checked> Präsens</label><br>
+                    <label><input type="checkbox" id="tense1" name="tenses" value="1" checked> Präteritum</label><br>
+                    <label><input type="checkbox" id="tense2" name="tenses" value="2" checked> Perfekt</label><br>
+                    <label><input type="checkbox" id="tense3" name="tenses" value="3" checked>
+                        Plusquamperfekt</label><br>
+                    <label><input type="checkbox" id="tense4" name="tenses" value="4" checked> Futur I</label><br>
+                    <label><input type="checkbox" id="tense5" name="tenses" value="5" checked> Futur II</label><br>
+                    <label><input type="checkbox" id="tense6" name="tenses" value="6" checked> Imperativ</label><br>
+                    <label><input type="checkbox" id="tense7" name="tenses" value="7" checked> Konjunktiv I</label><br>
+                    <label><input type="checkbox" id="tense8" name="tenses" value="8" checked> Konjunktiv II</label><br>
+                </div>
+            </fieldset>
+            <button class="button" onclick="saveOptions()">Save</button>
+        </div>
+        <div class="cover-panel" id="cover-panel"></div>
+
     </div>
+    <script src="germanverbconjugatorjs.coffee" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <?php include '../includes/footer.php'; ?>
 </body>
+
 </html>

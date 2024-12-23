@@ -1,0 +1,238 @@
+.game-body {
+	font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+	background-color: #ffddd4;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+
+.game-container {
+	background-color: white;
+	padding: 2rem 1.25rem 0.625rem;
+	max-width: 25.75rem;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+	text-align: center;
+	border-radius: 1.25rem;
+	position: relative;
+	box-shadow:
+		0 0 0 0.25rem black,
+		0.25rem 0 0 0.25rem black,
+		0.5rem 0 0 0.25rem black,
+		0.75rem 0 0 0.25rem black,
+		1rem 0 0 0.25rem black,
+		0 0.25rem 0 0.25rem black,
+		0 0.5rem 0 0.25rem black,
+		0 0.75rem 0 0.25rem black,
+		0 1rem 0 0.25rem black,
+		0.25rem 0.25rem 0 0.25rem black,
+		0.5rem 0.25rem 0 0.25rem black,
+		0.75rem 0.25rem 0 0.25rem black,
+		1rem 0.25rem 0 0.25rem black,
+		0.25rem 0.5rem 0 0.25rem black,
+		0.5rem 0.5rem 0 0.25rem black,
+		0.75rem 0.5rem 0 0.25rem black,
+		1rem 0.5rem 0 0.25rem black,
+		0.25rem 0.75rem 0 0.25rem black,
+		0.5rem 0.75rem 0 0.25rem black,
+		0.75rem 0.75rem 0 0.25rem black,
+		1rem 0.75rem 0 0.25rem black,
+		0.25rem 1rem 0 0.25rem black,
+		0.5rem 1rem 0 0.25rem black,
+		0.75rem 1rem 0 0.25rem black,
+		1rem 1rem 0 0.25rem black;
+}
+
+.tenseDisplay {
+	word-wrap: break-word;
+	position: absolute;
+	top: -1.5625rem;
+	left: -1.5625rem;
+	background-color: #5676e8;
+	border-style: solid;
+	border-radius: 99999px;
+	border-width: 0.1875rem;
+	border-color: black;
+	font-size: 1em;
+	padding: 0.625rem 1.25rem;
+	width: auto;
+	color: white;
+	margin-bottom: 0.625rem;
+}
+
+.display {
+	font-size: 2em;
+	margin-bottom: 0.625rem;
+}
+
+.entertextbox {
+	padding: 0.9375rem;
+	margin: 0.625rem 0;
+	width: calc(100% - 1.375rem);
+	box-sizing: border-box;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: black;
+	font-size: 1em;
+}
+
+.game-body .button,
+.special-char-button {
+	padding: 0.625rem 1.25rem;
+	margin-top: 0.625rem;
+	cursor: pointer;
+	border: none;
+	border-style: solid;
+	border-radius: 8px;
+	border-width: 1px;
+	border-color: black;
+	font-size: 1em;
+	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.game-body .button {
+	background-color: #007BFF;
+	color: white;
+	border-style: solid;
+	border-radius: 8px;
+	border-width: 1px;
+	border-color: black;
+}
+
+.game-body .button:hover,
+.special-char-button:hover {
+	transform: translateY(-0.1875rem);
+	box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 1);
+}
+
+.game-body .button:active,
+.special-char-button:active {
+	transform: translateY(0);
+	filter: brightness(90%);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 1);
+}
+
+.special-char-button {
+	padding: 0.625rem 0.9375rem;
+	margin: 0.1875rem;
+	width: calc(20% - 0.75rem);
+	background-color: #FFCC00;
+	color: black;
+}
+
+.special-char-button:hover,
+.special-char-button:active {
+	background-color: #FFCC00;
+}
+
+.result {
+	word-wrap: break-word;
+	background-color: #faefef;
+	border-style: solid;
+	border-radius: 8px;
+	border-width: 1px;
+	border-color: black;
+	font-size: 1em;
+	padding: 0.625rem 1.25rem;
+	width: auto;
+	color: white;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+.options-panel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 50rem;
+	padding: 1.25rem;
+	background-color: white;
+	border: 0.0625rem solid #ccc;
+	z-index: 99;
+	border-radius: 0.625rem;
+}
+
+.options-column {
+	width: calc(50% - 1.25rem);
+	margin: 0 0.625rem;
+	padding: 0.625rem;
+	box-sizing: border-box;
+	border: 0.0625rem solid #ccc;
+}
+
+.checkbox-group {
+	max-height: 12.5rem;
+	overflow-y: auto;
+}
+
+.options-toggle-menu {
+	position: absolute;
+	bottom: 0.625rem;
+	right: 0.625rem;
+}
+
+.cover-panel {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 98;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+@media only screen and (max-width: 915px) {
+	.options-panel {
+		width: 80%;
+	}
+
+	.options-column {
+		width: 100%;
+	}
+}
+
+.patreon-button {
+	background-color: #5c3fff;
+	color: white;
+	padding: 0.625rem 1.25rem;
+	text-decoration: none;
+	border-radius: 0.3125rem;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: background-color 0.3s, transform 0.3s;
+	display: block;
+	float: right;
+	width: 14.0625rem;
+	overflow: hidden;
+	margin: 0.5rem;
+}
+
+.patreon-button:hover {
+	background-color: #231066;
+}
+
+.options-toggle {
+	display: block;
+	float: right;
+	width: 6.875rem;
+	overflow: hidden;
+	margin: 0.5rem;
+}
