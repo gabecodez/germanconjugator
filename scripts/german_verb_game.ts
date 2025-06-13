@@ -5,7 +5,15 @@ const defaults = {
   disableForReducedMotion: true,
 };
 
-function fire(particleRatio: number, opts) {
+function fire(
+  particleRatio: number,
+  opts: {
+    spread: number;
+    startVelocity?: number;
+    origin: { x: number; y: number };
+    decay?: number;
+  }
+) {
   confetti(
     Object.assign({}, defaults, opts, {
       particleCount: Math.floor(200 * particleRatio),
@@ -13,7 +21,7 @@ function fire(particleRatio: number, opts) {
   );
 }
 
-function confettiExplosion(origin) {
+function confettiExplosion(origin: { x: number; y: number }) {
   fire(0.25, {
     spread: 26,
     startVelocity: 55,
@@ -79,10 +87,10 @@ const displayTenses = {
 let selectedVerbs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; // Indices of initially selected verbs
 let selectedTenses = [0, 1, 2, 3, 4, 5, 6, 7, 8]; // Indices of initially selected tenses
 
-let currentVerb = null;
-let currentPronoun = null;
+let currentVerb: { infinitive: any; conjugations: any } | null = null;
+let currentPronoun: string | null = null;
 let currentDisplayPronoun = null;
-let currentTense = null;
+let currentTense: string | null = null;
 let currentDisplayTense = null;
 
 function getRandomVerbIndex() {
@@ -163,7 +171,7 @@ function checkAnswer() {
   }
 }
 
-function insertChar(char) {
+function insertChar(char: any) {
   const input = document.getElementById("inputVerb");
   input.value += char;
   input.focus();
