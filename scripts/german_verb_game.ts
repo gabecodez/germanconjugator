@@ -93,7 +93,7 @@ let currentDisplayPronoun = null;
 let currentTense: string | null = null;
 let currentDisplayTense = null;
 
-function getRandomVerbIndex() {
+function getRandomVerbIndex(): number {
   const randomIndex =
     selectedVerbs[Math.floor(Math.random() * selectedVerbs.length)];
   return randomIndex;
@@ -109,7 +109,7 @@ function getRandomImperativePronounIndex() {
   return randomIndex;
 }
 
-function getRandomTenseIndex() {
+function getRandomTenseIndex(): number {
   const randomIndex =
     selectedTenses[Math.floor(Math.random() * selectedTenses.length)];
   return randomIndex;
@@ -143,7 +143,9 @@ function displayNewVerb() {
 }
 
 function checkAnswer() {
-  const userAnswer = document.getElementById("inputVerb").value.trim();
+  const userAnswer = (
+    document.getElementById("inputVerb") as HTMLFormElement
+  ).value.trim();
   const correctAnswer = currentVerb.conjugations[currentTense][currentPronoun];
   const resultElement = document.getElementById("result");
   const trigger = document.getElementById("button");
@@ -173,15 +175,17 @@ function checkAnswer() {
 
 function insertChar(char: any) {
   const input = document.getElementById("inputVerb");
-  input.value += char;
-  input.focus();
+  if (input != null) {
+    input.value += char;
+    input.focus();
+  }
 }
 
 function toggleOptionsPanel() {
-  const panel = document.getElementById("optionsPanel");
+  const panel = document.getElementById("optionsPanel") as HTMLElement;
   panel.style.display = panel.style.display === "flex" ? "none" : "flex";
 
-  const coverpanel = document.getElementById("cover-panel");
+  const coverpanel = document.getElementById("cover-panel") as HTMLElement;
   coverpanel.style.display =
     coverpanel.style.display === "flex" ? "none" : "flex";
 }
